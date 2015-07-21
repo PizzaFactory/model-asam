@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="jp.pizzafactory.model.asam"
+      label="ASAM Specified Models (core)"
+      version="0.0.1.qualifier"
+      provider-name="PizzaFactory Project">
+
+   <description>
+      Plugins for ASAM Specified Models
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      Copyright (C) 2010- PizzaFactory Project.
+   </copyright>
+
+   <license>
+      EPL 1.0
+   </license>
+
+   <plugin
+         id="jp.pizzafactory.model.asam.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="jp.pizzafactory.model.asam.cc"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

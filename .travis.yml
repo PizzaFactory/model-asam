@@ -1,0 +1,13 @@
+language: java
+script: mvn -f parent/pom.xml deploy
+after_success:
+- git clone --depth=1 -b gh-pages https://${GH_TOKEN}@github.com/PizzaFactory/mRDT.git gh-pages
+- cd gh-pages
+- mvn process-resources install
+env:
+  global:
+  - MAVEN_OPTS=-Xmx1024m
+  - PIZZAFACTORY_VERSION=8.5
+  - GIT_COMMITTER_NAME="Masaki Muranaka"
+  - GIT_COMMITTER_EMAIL="monaka@monami-ya.jp"
+  - secure: G7GSae9EJHdmmF1Nbv25vRuX9bKyedlVd7C6spIOJ/rX0AOoTRhZpWIrp8gvEdDc9Mock2djfpHsWwUYCkpW1yorao8MSY2u9SX5lu9vF0ACPdsqiRamvHEkVeu/nipf1fNBGkB5d2Ejdt4vMBUIuadK2c3PEbZqQULbRwgAG/k=

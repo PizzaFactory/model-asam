@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<CATALOG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="catalog_V3_0_0.ml.xsd">
+	<SHORT-NAME>sample</SHORT-NAME>
+	<ABLOCKS>
+		<ABLOCK>
+			<SHORT-NAME>FOO</SHORT-NAME>
+			<CATEGORY>SWSRC</CATEGORY>
+			<DOMAIN>AUTOSAR</DOMAIN>
+			<FILES>
+				<FILE>source/c/foo.c</FILE>
+			</FILES>
+		</ABLOCK>
+		<ABLOCK>
+			<SHORT-NAME>FOO</SHORT-NAME>
+			<CATEGORY>SWCT</CATEGORY>
+			<DOMAIN>AUTOSAR</DOMAIN>
+			<FILES>
+				<FILE>AUTOSAR/xml/foo.arxml</FILE>
+			</FILES>
+		</ABLOCK>
+		<ABLOCK>
+			<SHORT-NAME>FOO</SHORT-NAME>
+			<CATEGORY>ECUC</CATEGORY>
+			<DOMAIN>AUTOSAR</DOMAIN>
+			<FILES>
+				<FILE>AUTOSAR/ecuc/foo.ecucvalues.arxml</FILE>
+			</FILES>
+		</ABLOCK>
+	</ABLOCKS>
+</CATALOG>

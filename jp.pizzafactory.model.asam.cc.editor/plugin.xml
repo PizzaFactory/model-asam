@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Catalog -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="asamcc.presentation.Container_catalogModelWizardID"
+            name="%_UI_Container_catalogModelWizard_label"
+            class="asamcc.presentation.Container_catalogModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Container_catalogModelFile.gif">
+         <description>%_UI_Container_catalogModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Catalog -->
+      <editor
+            id="asamcc.presentation.Container_catalogEditorID"
+            name="%_UI_Container_catalogEditor_label"
+            icon="icons/full/obj16/Container_catalogModelFile.gif"
+            extensions="container_catalog"
+            class="asamcc.presentation.Container_catalogEditor"
+            contributorClass="asamcc.presentation.Container_catalogActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

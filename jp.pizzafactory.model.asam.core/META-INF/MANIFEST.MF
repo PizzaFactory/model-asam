@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EMF Model for ASAM Container Catalog
+Bundle-SymbolicName: jp.pizzafactory.model.asam.core
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: jp.pizzafactory.model.asam.core.internal.Activator
+Bundle-Vendor: PizzaFactory Project.
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf;bundle-version="2.6.0",
+ jp.pizzafactory.model.asam.cc;bundle-version="0.0.1",
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

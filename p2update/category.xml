@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/jp.pizzafactory.model.asam_0.0.0.qualifier.jar" id="jp.pizzafactory.model.asam">
+      <category name="EMF models for ASAM specified"/>
+   </feature>
+   <feature url="features/jp.pizzafactory.model.asam.ui_0.0.0.qualifier.jar" id="jp.pizzafactory.model.asam.ui">
+      <category name="EMF models for ASAM specified"/>
+   </feature>
+   <category-def name="EMF models for ASAM specified" label="EMF models for ASAM specified"/>
+</site>
