@@ -61,7 +61,7 @@
           <noJekyll>true</noJekyll>
           <outputDirectory>${project.build.directory}/repository</outputDirectory>
           <branch>refs/heads/gh-pages</branch>
-          <repositoryName>ASAM</repositoryName>
+          <repositoryName>model-asam</repositoryName>
           <repositoryOwner>PizzaFactory</repositoryOwner>
           <merge>true</merge>
         </configuration>

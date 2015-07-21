@@ -247,7 +247,7 @@
           <noJekyll>true</noJekyll>
           <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
           <branch>refs/heads/gh-pages</branch>
-          <repositoryName>ASAM-CC</repositoryName>
+          <repositoryName>model-asam</repositoryName>
           <repositoryOwner>PizzaFactory</repositoryOwner>
           <merge>true</merge>
         </configuration>
