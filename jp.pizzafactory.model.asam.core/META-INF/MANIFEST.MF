@@ -5,6 +5,8 @@ Bundle-SymbolicName: jp.pizzafactory.model.asam.core
 Bundle-Version: 0.0.1.qualifier
 Bundle-Activator: jp.pizzafactory.model.asam.core.internal.Activator
 Bundle-Vendor: PizzaFactory Project.
+Export-Package: jp.pizzafactory.model.asam.core,
+ jp.pizzafactory.model.asam.core.impl
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf;bundle-version="2.6.0",
  jp.pizzafactory.model.asam.cc,
