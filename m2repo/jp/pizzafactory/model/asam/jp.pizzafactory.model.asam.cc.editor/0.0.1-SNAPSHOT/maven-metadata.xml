@@ -5,32 +5,32 @@
   <version>0.0.1-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20150804.082258</timestamp>
+      <timestamp>20150804.084110</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20150804082258</lastUpdated>
+    <lastUpdated>20150804084110</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>0.0.1-20150804.082258-1</value>
-        <updated>20150804082258</updated>
+        <value>0.0.1-20150804.084110-1</value>
+        <updated>20150804084110</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>0.0.1-20150804.082258-1</value>
-        <updated>20150804082258</updated>
+        <value>0.0.1-20150804.084110-1</value>
+        <updated>20150804084110</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>p2metadata</classifier>
         <extension>xml</extension>
-        <value>0.0.1-20150804.082258-1</value>
-        <updated>20150804082258</updated>
+        <value>0.0.1-20150804.084110-1</value>
+        <updated>20150804084110</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>p2artifacts</classifier>
         <extension>xml</extension>
-        <value>0.0.1-20150804.082258-1</value>
-        <updated>20150804082258</updated>
+        <value>0.0.1-20150804.084110-1</value>
+        <updated>20150804084110</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
