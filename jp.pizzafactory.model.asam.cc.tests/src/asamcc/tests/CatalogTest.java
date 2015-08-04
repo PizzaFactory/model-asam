@@ -5,6 +5,7 @@ package asamcc.tests;
 import asamcc.Catalog;
 import asamcc.Container_catalogFactory;
 
+import org.junit.Test;
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
@@ -86,4 +87,8 @@ public class CatalogTest extends TestCase {
         setFixture(null);
     }
 
+    @Test
+    public void test() {
+        //TODO: dummy
+    }
 } //CatalogTest

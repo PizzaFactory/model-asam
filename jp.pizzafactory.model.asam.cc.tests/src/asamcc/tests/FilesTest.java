@@ -5,6 +5,7 @@ package asamcc.tests;
 import asamcc.Container_catalogFactory;
 import asamcc.Files;
 
+import org.junit.Test;
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
@@ -86,4 +87,8 @@ public class FilesTest extends TestCase {
         setFixture(null);
     }
 
+    @Test
+    public void test() {
+        //TODO: dummy
+    }
 } //FilesTest

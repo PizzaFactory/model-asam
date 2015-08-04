@@ -5,6 +5,7 @@ package asamcc.tests;
 import asamcc.Ablock;
 import asamcc.Container_catalogFactory;
 
+import org.junit.Test;
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
@@ -86,4 +87,8 @@ public class AblockTest extends TestCase {
         setFixture(null);
     }
 
+    @Test
+    public void test() {
+        //TODO: dummy
+    }
 } //AblockTest
