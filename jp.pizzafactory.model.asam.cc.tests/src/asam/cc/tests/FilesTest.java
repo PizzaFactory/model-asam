@@ -88,7 +88,7 @@ public class FilesTest extends TestCase {
     }
 
     @Test
-    public void fileTest() {
+    public void testFile() {
         // TODO dummy
         assertTrue(true);
     }
