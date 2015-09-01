@@ -2,12 +2,13 @@
  */
 package asam.cc.tests;
 
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
+
+import org.junit.Test;
+
 import asam.cc.ContainerCatalogFactory;
 import asam.cc.Files;
-
-import junit.framework.TestCase;
-
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
