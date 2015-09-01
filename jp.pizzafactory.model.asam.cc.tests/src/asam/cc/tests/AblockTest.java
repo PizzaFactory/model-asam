@@ -88,7 +88,8 @@ public class AblockTest extends TestCase {
     }
 
     @Test
-    void testAblock() {
+    public void testAblock() {
+        assertTrue(true);
         // TODO dummy
     }
 } // AblockTest

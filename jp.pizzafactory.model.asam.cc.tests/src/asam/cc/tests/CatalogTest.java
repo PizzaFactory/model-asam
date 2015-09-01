@@ -90,5 +90,6 @@ public class CatalogTest extends TestCase {
     @Test
     public void catalogTest() {
         // TODO dummy
+        assertTrue(true);
     }
 } // CatalogTest
