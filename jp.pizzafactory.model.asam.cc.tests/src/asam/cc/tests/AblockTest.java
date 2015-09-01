@@ -2,12 +2,13 @@
  */
 package asam.cc.tests;
 
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
+
+import org.junit.Test;
+
 import asam.cc.Ablock;
 import asam.cc.ContainerCatalogFactory;
-
-import junit.framework.TestCase;
-
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
@@ -86,4 +87,8 @@ public class AblockTest extends TestCase {
         setFixture(null);
     }
 
-} //AblockTest
+    @Test
+    void testAblock() {
+        // TODO dummy
+    }
+} // AblockTest

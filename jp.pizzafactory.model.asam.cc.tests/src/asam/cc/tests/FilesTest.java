@@ -86,4 +86,8 @@ public class FilesTest extends TestCase {
         setFixture(null);
     }
 
-} //FilesTest
+    @Test
+    public void fileTest() {
+        // TODO dummy
+    }
+} // FilesTest
