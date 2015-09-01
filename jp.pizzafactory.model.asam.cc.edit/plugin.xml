@@ -7,10 +7,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated Catalog -->
+      <!-- @generated Asam -->
       <factory
-            uri="http://www.w3.org/2001/XMLSchema-instance"
-            class="asamcc.provider.Container_catalogItemProviderAdapterFactory"
+            uri="http://pizzafactory.jp/asam/cc"
+            class="asam.cc.provider.ContainerCatalogItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

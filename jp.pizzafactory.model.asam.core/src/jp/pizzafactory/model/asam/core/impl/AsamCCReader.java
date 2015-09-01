@@ -16,10 +16,10 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import asamcc.Ablock;
-import asamcc.Catalog;
-import asamcc.Container_catalogFactory;
-import asamcc.Files;
+import asam.cc.Ablock;
+import asam.cc.Catalog;
+import asam.cc.ContainerCatalogFactory;
+import asam.cc.Files;
 
 public class AsamCCReader {
 
@@ -37,7 +37,7 @@ public class AsamCCReader {
     }
 
     protected Files parseInFiles(Node baseNode) {
-        Files files = Container_catalogFactory.eINSTANCE.createFiles();
+        Files files = ContainerCatalogFactory.eINSTANCE.createFiles();
         List<String> list = files.getFile();
         NodeList nodes = baseNode.getChildNodes();
         for (int i = 0; i < nodes.getLength(); i++) {
@@ -52,7 +52,7 @@ public class AsamCCReader {
     }
 
     protected Ablock parseInAblock(Node baseNode) {
-        Ablock ablock = Container_catalogFactory.eINSTANCE.createAblock();
+        Ablock ablock = ContainerCatalogFactory.eINSTANCE.createAblock();
         NodeList nodes = baseNode.getChildNodes();
         for (int i = 0; i < nodes.getLength(); i++) {
             Node node = nodes.item(i);
@@ -114,7 +114,7 @@ public class AsamCCReader {
     }
 
     protected Catalog parseInCatalog(Node baseNode) {
-        Catalog catalog = Container_catalogFactory.eINSTANCE.createCatalog();
+        Catalog catalog = ContainerCatalogFactory.eINSTANCE.createCatalog();
         for (Node node = baseNode.getFirstChild(); node != null; node = node
                 .getNextSibling()) {
             if (node.getNodeType() == Node.ELEMENT_NODE) {

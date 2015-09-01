@@ -7,31 +7,30 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated Catalog -->
+      <!-- @generated Asam -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="asamcc.presentation.Container_catalogModelWizardID"
-            name="%_UI_Container_catalogModelWizard_label"
-            class="asamcc.presentation.Container_catalogModelWizard"
+            id="asam.cc.presentation.ContainerCatalogModelWizardID"
+            name="%_UI_ContainerCatalogModelWizard_label"
+            class="asam.cc.presentation.ContainerCatalogModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/Container_catalogModelFile.gif">
-         <description>%_UI_Container_catalogModelWizard_description</description>
+            icon="icons/full/obj16/ContainerCatalogModelFile.gif">
+         <description>%_UI_ContainerCatalogModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated Catalog -->
+      <!-- @generated Asam -->
       <editor
-            id="asamcc.presentation.Container_catalogEditorID"
-            name="%_UI_Container_catalogEditor_label"
-            icon="icons/full/obj16/Container_catalogModelFile.gif"
-            extensions="container_catalog"
-            class="asamcc.presentation.Container_catalogEditor"
-            contributorClass="asamcc.presentation.Container_catalogActionBarContributor">
+            id="asam.cc.presentation.ContainerCatalogEditorID"
+            name="%_UI_ContainerCatalogEditor_label"
+            icon="icons/full/obj16/ContainerCatalogModelFile.gif"
+            extensions="asamcc"
+            class="asam.cc.presentation.ContainerCatalogEditor"
+            contributorClass="asam.cc.presentation.ContainerCatalogActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

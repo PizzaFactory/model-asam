@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
-import asamcc.Catalog;
-import asamcc.impl.CatalogImpl;
+import asam.cc.Catalog;
+import asam.cc.impl.CatalogImpl;
 
 public class AsamCCReaderTest {
     /*

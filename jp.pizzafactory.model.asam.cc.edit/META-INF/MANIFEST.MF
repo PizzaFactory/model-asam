@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: jp.pizzafactory.model.asam.cc.edit;singleton:=true
 Bundle-Version: 0.0.1.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: asamcc.provider.CatalogEditPlugin$Implementation
+Bundle-Activator: asam.cc.provider.AsamEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: asamcc.provider
+Export-Package: asam.cc.provider
 Require-Bundle: org.eclipse.core.runtime,
  jp.pizzafactory.model.asam.cc;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport

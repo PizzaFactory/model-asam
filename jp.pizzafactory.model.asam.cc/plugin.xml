@@ -7,11 +7,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated Catalog -->
+      <!-- @generated Asam -->
       <package
-            uri="http://www.w3.org/2001/XMLSchema-instance"
-            class="asamcc.Container_catalogPackage"
-            genModel="model/Catalog.genmodel"/>
+            uri="http://pizzafactory.jp/asam/cc"
+            class="asam.cc.ContainerCatalogPackage"
+            genModel="model/Asam.genmodel"/>
    </extension>
 
 </plugin>
