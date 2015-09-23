@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Engineering-Object storage support
+Bundle-SymbolicName: jp.pizzafactory.model.asam.cc.objstore
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: jp.pizzafactory.model.asam.cc.objstore.internal.Activator
+Bundle-Vendor: PizzaFactory Project.
+Require-Bundle: org.eclipse.core.runtime,
+ jp.pizzafactory.model.asam.cc;bundle-version="0.0.1",
+ org.eclipse.aether.api;bundle-version="1.0.1",
+ org.eclipse.aether.connector.basic;bundle-version="1.0.1",
+ org.eclipse.aether.impl;bundle-version="1.0.1",
+ org.eclipse.aether.maven;bundle-version="3.1.0",
+ org.eclipse.aether.spi;bundle-version="1.0.1",
+ org.eclipse.aether.transport.file;bundle-version="1.0.1",
+ org.eclipse.aether.transport.http;bundle-version="1.0.1",
+ org.eclipse.aether.util;bundle-version="1.0.1",
+ org.eclipse.equinox.registry
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: jp.pizzafactory.model.asam.cc.objstore
