@@ -1,14 +1,18 @@
 package jp.pizzafactory.model.asam.cc.objstore;
 
-import java.io.File;
+import java.util.Map;
 
 import org.eclipse.core.runtime.CoreException;
 
-import asam.cc.Ablock;
-
 public interface AblockProxy {
 
-    public abstract File toFile(Ablock ablock, String classifier, String version)
+    Map<String, String> getZipPathMap();
+
+    void install(String version) throws CoreException;
+
+    void deploy(String version, String targetUrl, String repoId)
             throws CoreException;
+
+    void checkout(String version) throws CoreException;
 
 }

@@ -8,7 +8,11 @@ import java.util.List;
 import jp.pizzafactory.model.asam.cc.objstore.AblockProxy;
 import jp.pizzafactory.model.asam.cc.objstore.AblockProxyFactory;
 
+import org.eclipse.aether.repository.Authentication;
 import org.eclipse.aether.repository.RemoteRepository;
+import org.eclipse.aether.util.repository.AuthenticationBuilder;
+
+import asam.cc.Ablock;
 
 public class AblockProxyFactoryImpl implements AblockProxyFactory {
 
@@ -22,8 +26,19 @@ public class AblockProxyFactoryImpl implements AblockProxyFactory {
 
     @Override
     public void addRemoteRepository(String repoId, String type, String repoUrl) {
-        RemoteRepository repo = new RemoteRepository.Builder(repoId, type,
+        final RemoteRepository repo = new RemoteRepository.Builder(repoId,
+                type,
                 repoUrl).build();
+        repositoryHash.put(repoId, repo);
+    }
+
+    @Override
+    public void addRemoteRepository(String repoId, String type, String repoUrl,
+            String userName, String passwd) {
+        final Authentication auth = new AuthenticationBuilder()
+                .addUsername(userName).addPassword(passwd).build();
+        final RemoteRepository repo = new RemoteRepository.Builder(
+                repoId, type, repoUrl).setAuthentication(auth).build();
         repositoryHash.put(repoId, repo);
     }
 
@@ -42,10 +57,15 @@ public class AblockProxyFactoryImpl implements AblockProxyFactory {
     }
 
     @Override
-    public AblockProxy create() {
+    public AblockProxy create(Ablock ablock, File basedir) {
         List<RemoteRepository> repos = newRepositories();
         RepositoryConfigurationImpl conf = new RepositoryConfigurationImpl(
-                repoBasedir, repos);
-        return new AblockProxyImpl(conf);
+                this, repoBasedir, repos, basedir);
+        return new AblockProxyImpl(ablock, conf);
+    }
+
+    @Override
+    public File getRepoBasedir() {
+        return repoBasedir;
     }
 }

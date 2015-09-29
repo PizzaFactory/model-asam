@@ -1,18 +1,26 @@
 package jp.pizzafactory.model.asam.cc.objstore;
 
+import java.io.File;
+
 import org.eclipse.aether.repository.RemoteRepository;
 
+import asam.cc.Ablock;
 
 
 public interface AblockProxyFactory {
 
-    public void addRemoteRepository(String repoId, String type,
+    void addRemoteRepository(String repoId, String type,
             String repoUrl);
 
-    public void removeRemoteRepository(String repoId);
+    void addRemoteRepository(String repoId, String type, String repoUrl,
+            String userName, String passwd);
 
-    public RemoteRepository getRemoteRepository(String repoId);
+    void removeRemoteRepository(String repoId);
 
-    public AblockProxy create();
+    RemoteRepository getRemoteRepository(String repoId);
+
+    AblockProxy create(Ablock ablock, File basedir);
+
+    File getRepoBasedir();
 
 }
