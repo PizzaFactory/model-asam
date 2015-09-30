@@ -7,7 +7,7 @@
   <artifactId>jp.pizzafactory.model.asam</artifactId>
   <packaging>eclipse-feature</packaging>
 
-  <name>Plugins for ASAM Sprcified Models</name>
+  <name>Feature bundle for ASAM Sprcified Models</name>
 
   <licenses>
     <license>

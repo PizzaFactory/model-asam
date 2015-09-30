@@ -7,7 +7,7 @@
   <artifactId>jp.pizzafactory.model.asam.cc.objstore.tests</artifactId>
   <packaging>eclipse-test-plugin</packaging>
 
-  <name>ASAM CC Model (core)</name>
+  <name>Tests for Engineering-Object storage support.</name>
 
   <licenses>
     <license>
