@@ -5,8 +5,13 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 
+import java.io.File;
+
 import org.junit.Before;
 import org.junit.Test;
+
+import asam.cc.Ablock;
+import asam.cc.impl.ContainerCatalogFactoryImpl;
 
 public class AblockProxyFactoryTest {
 
@@ -28,6 +33,22 @@ public class AblockProxyFactoryTest {
     }
 
     @Test
+    public void testCreate() {
+        File basedir = new File("dummy");
+        Ablock ablock = ContainerCatalogFactoryImpl.eINSTANCE.createAblock();
+        factory.create(ablock, basedir);
+    }
+
+    @Test
+    public void testRepoBasedir() {
+        File file = new File("dummy");
+        File basedir = RepositoryUtil.newAblockProxyFactory(file)
+                .getRepoBasedir();
+
+        assertThat(file, equalTo(basedir));
+    }
+
+    @Test
     public void testRemoveRemoveRepository() {
         /* Check if ID is not registered. */
         assertNull(factory.getRemoteRepository(ID));
@@ -40,5 +61,4 @@ public class AblockProxyFactoryTest {
         /* Check if ID is removed. */
         assertNull(factory.getRemoteRepository(ID));
     }
-
 }
