@@ -60,7 +60,7 @@ public class Unzipper {
                         final FileOutputStream fos = new FileOutputStream(
                                 outFile);
                         IOUtils.copy(zis, fos);
-                        pathHash.put(relativePath, null);
+                        pathHash.remove(relativePath);
                     }
                 }
             }
@@ -79,7 +79,7 @@ public class Unzipper {
     private void checkMissingFiles(Map<String, String> pathHash)
             throws CoreException {
         MultiStatus multiStatus = new MultiStatus(Activator.PLUGIN_ID, 0, "Specified file(s) are not found.", null);
-        for (String path : pathHash.values()) {
+        for (String path : pathHash.keySet()) {
             if (!new File(path).exists()) {
                 multiStatus.add(new Status(IStatus.ERROR, Activator.PLUGIN_ID,
                         path, null));
@@ -88,6 +88,5 @@ public class Unzipper {
         if (!multiStatus.isOK()) {
             throw new CoreException(multiStatus);
         }
-
     }
 }
