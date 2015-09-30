@@ -28,6 +28,8 @@
 		<tycho-groupid>org.eclipse.tycho</tycho-groupid>
 		<pizzafactory-version>8.5</pizzafactory-version>
 		<github.global.oauth2Token>${env.GH_TOKEN}</github.global.oauth2Token>
+		<jacoco.destFile>${basedir}/../build-target/target/jacoco.exec</jacoco.destFile>
+		<sonar.jacoco.reportPath>${basedir}/../build-target/target/jacoco.exec</sonar.jacoco.reportPath>
 	</properties>
 
 	<scm>
