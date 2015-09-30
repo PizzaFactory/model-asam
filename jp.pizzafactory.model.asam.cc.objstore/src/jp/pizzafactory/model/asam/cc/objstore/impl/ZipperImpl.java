@@ -62,8 +62,7 @@ public class ZipperImpl implements Zipper {
                 IOUtils.copy(is, zos);
             } catch (IOException e) {
                 final IStatus status = new Status(IStatus.ERROR,
-                        Activator.PLUGIN_ID,
-                        filePath);
+                        Activator.PLUGIN_ID, filePath, e);
                 multiStatus.add(status);
             } finally {
                 IOUtils.closeQuietly(is);

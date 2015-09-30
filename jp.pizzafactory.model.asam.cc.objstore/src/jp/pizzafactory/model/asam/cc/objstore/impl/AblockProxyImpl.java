@@ -28,7 +28,7 @@ import asam.cc.Ablock;
 
 public class AblockProxyImpl implements AblockProxy {
 
-    private final String ZIP_EXT = "zip"; //$NON-NLS-1$
+    private static final String ZIP_EXT = "zip"; //$NON-NLS-1$
     private RepositoryConfiguration conf;
     private Zipper zipper;
     private Ablock ablock;

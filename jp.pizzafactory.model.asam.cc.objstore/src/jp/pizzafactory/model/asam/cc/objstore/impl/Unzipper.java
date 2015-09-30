@@ -66,7 +66,7 @@ public class Unzipper {
             }
         } catch (IOException e) {
             IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
-                    "Internal error: unzip failed.");
+                    "Internal error: unzip failed.", e);
             throw new CoreException(status);
         }
         

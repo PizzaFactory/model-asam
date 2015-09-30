@@ -19,6 +19,10 @@ import org.eclipse.core.runtime.Status;
 
 public class AetherUtils {
 
+    private AetherUtils() {
+        /* It is an utility class */
+    }
+
     public static RepositorySystem newRepositorySystem() {
         DefaultServiceLocator locator = MavenRepositorySystemUtils
                 .newServiceLocator();

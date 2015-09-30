@@ -6,6 +6,10 @@ import jp.pizzafactory.model.asam.cc.objstore.impl.AblockProxyFactoryImpl;
 
 public class RepositoryUtil {
 
+    private RepositoryUtil() {
+        /* It is an utility class. */
+    }
+
     /**
      * Create new instance of AblockProxyFactory.
      * 
@@ -27,13 +31,17 @@ public class RepositoryUtil {
      *            repository location.
      * @return
      */
-    public static AblockProxyFactory newAblockProxyFactory(File repoBasedir) {
+    public static AblockProxyFactory newAblockProxyFactory(
+            final File repoBasedir) {
+        final File dir;
         if (repoBasedir == null) {
             String[] path = new String[] { System.getProperty("user.home"),
                     ".m2", "repository" };
 
-            repoBasedir = new File(String.join(File.separator, path));
+            dir = new File(String.join(File.separator, path));
+        } else {
+            dir = repoBasedir;
         }
-        return new AblockProxyFactoryImpl(repoBasedir);
+        return new AblockProxyFactoryImpl(dir);
     }
 }
