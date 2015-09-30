@@ -1,5 +1,7 @@
 package jp.pizzafactory.model.asam.cc.objstore.internal;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.File;
@@ -51,6 +53,73 @@ public class AblockProxyTest {
         // "http://central.maven.org/maven2/");
         AblockProxy proxy = factory.create(ablock, basedir);
         proxy.install("0.0.1-SNAPSHOT");
+    }
+
+    @Test
+    public void testCheckout() throws CoreException {
+        File basedir = tempFolder.getRoot();
+
+        assertFalse(new File(basedir, TEST_FILE_PATH).exists());
+
+        Ablock ablock = ContainerCatalogFactory.eINSTANCE.createAblock();
+        ablock.setDomain("jp.pizzafactory.model.asam.cc.objstore");
+        ablock.setShortName("test-placefolder");
+        ablock.setCategory("install-test-artifact");
+        Files files = ContainerCatalogFactory.eINSTANCE.createFiles();
+        ablock.setFiles(files);
+        files.getFile().add(TEST_FILE_PATH);
+
+        AblockProxyFactory factory = RepositoryUtil.newAblockProxyFactory();
+        // factory.addRemoteRepository("central", "default",
+        // "http://central.maven.org/maven2/");
+        AblockProxy proxy = factory.create(ablock, basedir);
+        proxy.checkout("0.0.1-SNAPSHOT");
+        assertTrue(new File(basedir, TEST_FILE_PATH).exists());
+    }
+
+    @Test(expected = CoreException.class)
+    public void test2Checkout() throws CoreException {
+        File basedir = tempFolder.getRoot();
+
+        assertFalse(new File(basedir, TEST_FILE_PATH).exists());
+
+        Ablock ablock = ContainerCatalogFactory.eINSTANCE.createAblock();
+        ablock.setDomain("jp.pizzafactory.model.asam.cc.objstore");
+        ablock.setShortName("test-placefolder");
+        ablock.setCategory("install-test-artifact");
+        Files files = ContainerCatalogFactory.eINSTANCE.createFiles();
+        ablock.setFiles(files);
+        files.getFile().add(TEST_FILE_PATH + "2");
+
+        AblockProxyFactory factory = RepositoryUtil.newAblockProxyFactory();
+        // factory.addRemoteRepository("central", "default",
+        // "http://central.maven.org/maven2/");
+        AblockProxy proxy = factory.create(ablock, basedir);
+        proxy.checkout("0.0.1-SNAPSHOT");
+        assertTrue(new File(basedir, TEST_FILE_PATH).exists());
+    }
+
+    @Test(expected = CoreException.class)
+    public void test3Checkout() throws CoreException {
+        File basedir = tempFolder.getRoot();
+
+        assertFalse(new File(basedir, TEST_FILE_PATH).exists());
+
+        Ablock ablock = ContainerCatalogFactory.eINSTANCE.createAblock();
+        ablock.setDomain("jp.pizzafactory.model.asam.cc.objstore");
+        ablock.setShortName("test-placefolder");
+        ablock.setCategory("install-test-artifact");
+        Files files = ContainerCatalogFactory.eINSTANCE.createFiles();
+        ablock.setFiles(files);
+        files.getFile().add(TEST_FILE_PATH);
+        files.getFile().add(TEST_FILE_PATH + "2");
+
+        AblockProxyFactory factory = RepositoryUtil.newAblockProxyFactory();
+        // factory.addRemoteRepository("central", "default",
+        // "http://central.maven.org/maven2/");
+        AblockProxy proxy = factory.create(ablock, basedir);
+        proxy.checkout("0.0.1-SNAPSHOT");
+        assertTrue(new File(basedir, TEST_FILE_PATH).exists());
     }
 
 }
