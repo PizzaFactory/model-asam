@@ -42,7 +42,7 @@
 		<module>../jp.pizzafactory.model.asam.cc</module>
 		<module>../jp.pizzafactory.model.asam.cc.edit</module>
 		<module>../jp.pizzafactory.model.asam.cc.editor</module>
-		<module>../jp.pizzafactory.model.asam.cc.tests</module>
+		<!-- <module>../jp.pizzafactory.model.asam.cc.tests</module> -->
 		<module>../jp.pizzafactory.model.asam.core</module>
 		<module>../jp.pizzafactory.model.asam.core.tests</module>
 		<module>../jp.pizzafactory.model.asam.cc.objstore</module>
