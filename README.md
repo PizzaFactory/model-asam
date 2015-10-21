@@ -1,5 +1,7 @@
 # EMF Model Support for specs by ASAM.
 
+[![Build Status](https://travis-ci.org/PizzaFactory/model-asam.svg)](https://travis-ci.org/PizzaFactory/model-asam)
+
 What's this
 -----------
 
