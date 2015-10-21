@@ -3,9 +3,6 @@
 package asam.cc.provider;
 
 
-import asam.cc.ContainerCatalogPackage;
-import asam.cc.Files;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -14,24 +11,21 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link asam.cc.Files} object.
+ * This is the item provider adapter for a {@link java.net.URI} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FilesItemProvider 
+public class FileItemProvider 
     extends ItemProviderAdapter
     implements
         IEditingDomainItemProvider,
@@ -45,7 +39,7 @@ public class FilesItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public FilesItemProvider(AdapterFactory adapterFactory) {
+    public FileItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -60,42 +54,19 @@ public class FilesItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addFilePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
     /**
-     * This adds a property descriptor for the File feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addFilePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Files_file_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Files_file_feature", "_UI_Files_type"),
-                 ContainerCatalogPackage.Literals.FILES__FILE,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                 null,
-                 null));
-    }
-
-    /**
-     * This returns Files.gif.
+     * This returns File.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/Files"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/File"));
     }
 
     /**
@@ -106,7 +77,7 @@ public class FilesItemProvider
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_Files_type");
+        return getString("_UI_File_type");
     }
     
 
@@ -120,12 +91,6 @@ public class FilesItemProvider
     @Override
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
-
-        switch (notification.getFeatureID(Files.class)) {
-            case ContainerCatalogPackage.FILES__FILE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-        }
         super.notifyChanged(notification);
     }
 

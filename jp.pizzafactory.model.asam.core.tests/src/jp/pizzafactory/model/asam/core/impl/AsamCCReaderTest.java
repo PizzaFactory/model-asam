@@ -3,17 +3,14 @@ package jp.pizzafactory.model.asam.core.impl;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.io.IOException;
 import java.io.InputStream;
-
-import javax.xml.parsers.ParserConfigurationException;
 
 import jp.pizzafactory.model.asam.core.AsamCCResource;
 
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.junit.Test;
-import org.xml.sax.SAXException;
 
 import asam.cc.Catalog;
 import asam.cc.impl.CatalogImpl;
@@ -32,8 +29,7 @@ public class AsamCCReaderTest {
      * fail("Not yet implemented"); }
      */
     @Test
-    public void testReadAsamCCResourceInputStream()
-            throws ParserConfigurationException, SAXException, IOException {
+    public void testReadAsamCCResourceInputStream() throws CoreException {
         AsamCCReader reader = new AsamCCReader();
         AsamCCResource resource = new AsamCCResourceImpl(
                 URI.createURI("file:dummy"));

@@ -62,8 +62,10 @@ public class AblockItemProvider
 
             addShortNamePropertyDescriptor(object);
             addCategoryPropertyDescriptor(object);
+            addArefsPropertyDescriptor(object);
             addDomainPropertyDescriptor(object);
             addFilesPropertyDescriptor(object);
+            addIntendedFileNamePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -113,6 +115,28 @@ public class AblockItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Arefs feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addArefsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Ablock_arefs_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Ablock_arefs_feature", "_UI_Ablock_type"),
+                 ContainerCatalogPackage.Literals.ABLOCK__AREFS,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Domain feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -151,7 +175,29 @@ public class AblockItemProvider
                  true,
                  false,
                  true,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Intended File Name feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addIntendedFileNamePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Ablock_intendedFileName_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Ablock_intendedFileName_feature", "_UI_Ablock_type"),
+                 ContainerCatalogPackage.Literals.ABLOCK__INTENDED_FILE_NAME,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
     }
@@ -197,6 +243,7 @@ public class AblockItemProvider
             case ContainerCatalogPackage.ABLOCK__SHORT_NAME:
             case ContainerCatalogPackage.ABLOCK__CATEGORY:
             case ContainerCatalogPackage.ABLOCK__DOMAIN:
+            case ContainerCatalogPackage.ABLOCK__INTENDED_FILE_NAME:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

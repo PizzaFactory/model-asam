@@ -24,9 +24,10 @@ public class Unzipper {
 
     public Map<String, String> getPathHash(final Ablock ablock)
             throws CoreException {
-        MultiStatus multiStatus = new MultiStatus(Activator.PLUGIN_ID, 0, "Duplicate file paths specified", null);
+        MultiStatus multiStatus = new MultiStatus(Activator.PLUGIN_ID, 0,
+                "Duplicate file paths specified", null);
         final Map<String, String> pathHash = new HashMap<String, String>();
-        for (String filePath : ablock.getFiles().getFile()) {
+        for (String filePath : ablock.getFiles()) {
             if (pathHash.get(filePath) != null) {
                 IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
                         filePath);
@@ -69,7 +70,7 @@ public class Unzipper {
                     "Internal error: unzip failed.", e);
             throw new CoreException(status);
         }
-        
+
         checkMissingFiles(pathHash);
     }
 
@@ -78,7 +79,8 @@ public class Unzipper {
      */
     private void checkMissingFiles(Map<String, String> pathHash)
             throws CoreException {
-        MultiStatus multiStatus = new MultiStatus(Activator.PLUGIN_ID, 0, "Specified file(s) are not found.", null);
+        MultiStatus multiStatus = new MultiStatus(Activator.PLUGIN_ID, 0,
+                "Specified file(s) are not found.", null);
         for (String path : pathHash.keySet()) {
             if (!new File(path).exists()) {
                 multiStatus.add(new Status(IStatus.ERROR, Activator.PLUGIN_ID,

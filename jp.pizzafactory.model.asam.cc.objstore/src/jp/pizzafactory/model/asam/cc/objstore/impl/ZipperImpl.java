@@ -36,14 +36,20 @@ public class ZipperImpl implements Zipper {
         this.conf = conf;
     }
 
-    private void storeEntries(ZipOutputStream zos)
-            throws CoreException {
+    private void storeEntries(ZipOutputStream zos) throws CoreException {
+
+        if (ablock.getFiles().size() != 1
+                && ablock.getIntendedFileName() != null) {
+            IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+                    "Must be one <FILE/> element when you use intented filename.");
+            throw new CoreException(status);
+        }
 
         MultiStatus multiStatus = new MultiStatus(Activator.PLUGIN_ID,
                 IStatus.OK, "Invalid URL(s)", null);
 
-        for (String filePath : ablock.getFiles().getFile()) {
-            InputStream is = null;
+        for (String filePath : ablock.getFiles()) {
+            BufferedInputStream bis = null;
             try {
                 final ZipEntry entry = new ZipEntry(filePath);
 
@@ -52,20 +58,25 @@ public class ZipperImpl implements Zipper {
                     filePath = pathMap.get(filePath);
                 }
 
-                File file = new File(filePath);
-                if (!file.isAbsolute()) {
-                    file = new File(conf.getBasedir(), filePath);
+                final InputStream is;
+                if (ablock.getIntendedFileName() == null) {
+                    File file = new File(filePath);
+                    if (!file.isAbsolute()) {
+                        file = new File(conf.getBasedir(), filePath);
+                    }
+                    is = new FileInputStream(file);
+                } else {
+                    is = ablock.getIntendedFileName().openStream();
                 }
-                final FileInputStream fis = new FileInputStream(file);
                 zos.putNextEntry(entry);
-                is = new BufferedInputStream(fis);
-                IOUtils.copy(is, zos);
+                bis = new BufferedInputStream(is);
+                IOUtils.copy(bis, zos);
             } catch (IOException e) {
                 final IStatus status = new Status(IStatus.ERROR,
                         Activator.PLUGIN_ID, filePath, e);
                 multiStatus.add(status);
             } finally {
-                IOUtils.closeQuietly(is);
+                IOUtils.closeQuietly(bis);
             }
         }
 
@@ -74,7 +85,9 @@ public class ZipperImpl implements Zipper {
         }
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     * 
      * @see jp.pizzafactory.model.asam.cc.objstore.impl.Zipper#buildZipArchive()
      */
     @Override
@@ -103,7 +116,9 @@ public class ZipperImpl implements Zipper {
         return zipFile;
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     * 
      * @see jp.pizzafactory.model.asam.cc.objstore.impl.Zipper#getPathMap()
      */
     @Override

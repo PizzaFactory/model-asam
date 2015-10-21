@@ -39,12 +39,12 @@ public class AblockProxyImpl implements AblockProxy {
         this.conf = conf;
     }
 
-    private Artifact getArtifact(String version) {
+    private Artifact getArtifact(final String version) {
         return new DefaultArtifact(ablock.getDomain(), ablock.getShortName(),
                 ablock.getCategory(), ZIP_EXT, version);
     }
 
-    private File downloadZippedArtifact(String version)
+    private File downloadZippedArtifact(final String version)
             throws ArtifactResolutionException {
         final Artifact artifact = getArtifact(version);
         final ArtifactRequest artifactRequest = new ArtifactRequest();
@@ -55,26 +55,25 @@ public class AblockProxyImpl implements AblockProxy {
         final RepositorySystemSession session = conf
                 .getRepositorySystemSession();
 
-            ArtifactResult artifactResult = system.resolveArtifact(session,
-                    artifactRequest);
-            return artifactResult.getArtifact().getFile();
+        final ArtifactResult artifactResult = system.resolveArtifact(session,
+                artifactRequest);
+        return artifactResult.getArtifact().getFile();
     }
 
     @Override
-    public void checkout(String version) throws CoreException {
+    public void checkout(final String version) throws CoreException {
         try {
-            File zipFile = downloadZippedArtifact(version);
+            final File zipFile = downloadZippedArtifact(version);
             new Unzipper().unzip(zipFile, ablock, conf);
         } catch (ArtifactResolutionException e) {
-            IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
-                    "Internal error", e);
+            final IStatus status = new Status(IStatus.ERROR,
+                    Activator.PLUGIN_ID, "Internal error", e);
             throw new CoreException(status);
         }
     }
 
     @Override
-    public void install(String version)
-            throws CoreException {
+    public void install(final String version) throws CoreException {
         final File zipFile = getZipper().buildZipArchive();
         final Artifact artifact = getArtifact(version).setFile(zipFile);
 
@@ -88,28 +87,25 @@ public class AblockProxyImpl implements AblockProxy {
         try {
             system.install(session, installRequest);
         } catch (InstallationException e) {
-            IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
-                    "Internal error", e);
+            final IStatus status = new Status(IStatus.ERROR,
+                    Activator.PLUGIN_ID, "Internal error", e);
             throw new CoreException(status);
         }
     }
 
     @Override
-    public void deploy(String version, String targetUrl, String repoId)
-            throws CoreException {
-        final Artifact artifact = getArtifact(version);
+    public void deploy(String version, String repoId) throws CoreException {
         final File zipFile = getZipper().buildZipArchive();
-        artifact.setFile(zipFile);
+        final Artifact artifact = getArtifact(version).setFile(zipFile);
 
         final RepositorySystem system = conf.getRepositorySystem();
         final RepositorySystemSession session = conf
                 .getRepositorySystemSession();
 
+        final DeployRequest deployRequest = new DeployRequest()
+                .addArtifact(artifact);
 
-        final DeployRequest deployRequest = new DeployRequest();
-        deployRequest.addArtifact(artifact);
-
-        RemoteRepository remoteRepository = conf.getAblockProxyFactory()
+        final RemoteRepository remoteRepository = conf.getAblockProxyFactory()
                 .getRemoteRepository(repoId);
         deployRequest.setRepository(remoteRepository);
 

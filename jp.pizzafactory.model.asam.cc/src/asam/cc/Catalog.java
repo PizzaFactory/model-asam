@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link asam.cc.Catalog#getShortName <em>Short Name</em>}</li>
  *   <li>{@link asam.cc.Catalog#getABlocks <em>ABlocks</em>}</li>
+ *   <li>{@link asam.cc.Catalog#getAdminData <em>Admin Data</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,5 +66,31 @@ public interface Catalog extends EObject {
      * @generated
      */
     EList<Ablock> getABlocks();
+
+    /**
+     * Returns the value of the '<em><b>Admin Data</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Admin Data</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Admin Data</em>' reference.
+     * @see #setAdminData(AdminData)
+     * @see asam.cc.ContainerCatalogPackage#getCatalog_AdminData()
+     * @model
+     * @generated
+     */
+    AdminData getAdminData();
+
+    /**
+     * Sets the value of the '{@link asam.cc.Catalog#getAdminData <em>Admin Data</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Admin Data</em>' reference.
+     * @see #getAdminData()
+     * @generated
+     */
+    void setAdminData(AdminData value);
 
 } // Catalog

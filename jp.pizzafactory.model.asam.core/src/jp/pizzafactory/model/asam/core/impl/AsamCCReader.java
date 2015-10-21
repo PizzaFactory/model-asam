@@ -10,7 +10,11 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import jp.pizzafactory.model.asam.core.AsamCCResource;
+import jp.pizzafactory.model.asam.core.internal.Activator;
 
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -19,7 +23,6 @@ import org.xml.sax.SAXException;
 import asam.cc.Ablock;
 import asam.cc.Catalog;
 import asam.cc.ContainerCatalogFactory;
-import asam.cc.Files;
 
 public class AsamCCReader {
 
@@ -36,9 +39,8 @@ public class AsamCCReader {
         return result;
     }
 
-    protected Files parseInFiles(Node baseNode) {
-        Files files = ContainerCatalogFactory.eINSTANCE.createFiles();
-        List<String> list = files.getFile();
+    protected List<String> parseInFiles(Node baseNode) throws CoreException {
+        List<String> list = new ArrayList<String>();
         NodeList nodes = baseNode.getChildNodes();
         for (int i = 0; i < nodes.getLength(); i++) {
             Node node = nodes.item(i);
@@ -48,10 +50,11 @@ public class AsamCCReader {
                 /* error */
             }
         }
-        return files;
+
+        return list;
     }
 
-    protected Ablock parseInAblock(Node baseNode) {
+    protected Ablock parseInAblock(Node baseNode) throws CoreException {
         Ablock ablock = ContainerCatalogFactory.eINSTANCE.createAblock();
         NodeList nodes = baseNode.getChildNodes();
         for (int i = 0; i < nodes.getLength(); i++) {
@@ -84,7 +87,7 @@ public class AsamCCReader {
                     if (ablock.getFiles() != null) {
                         /* error */
                     } else {
-                        ablock.setFiles(parseInFiles(node));
+                        ablock.getFiles().addAll(parseInFiles(node));
                     }
                     break;
                 default:
@@ -96,7 +99,7 @@ public class AsamCCReader {
         return ablock;
     }
 
-    protected List<Ablock> parseInAblocks(Node baseNode) {
+    protected List<Ablock> parseInAblocks(Node baseNode) throws CoreException {
         List<Ablock> ablocks = new ArrayList<Ablock>();
         NodeList nodes = baseNode.getChildNodes();
         for (int i = 0; i < nodes.getLength(); i++) {
@@ -113,7 +116,7 @@ public class AsamCCReader {
         return ablocks;
     }
 
-    protected Catalog parseInCatalog(Node baseNode) {
+    protected Catalog parseInCatalog(Node baseNode) throws CoreException {
         Catalog catalog = ContainerCatalogFactory.eINSTANCE.createCatalog();
         for (Node node = baseNode.getFirstChild(); node != null; node = node
                 .getNextSibling()) {
@@ -143,7 +146,8 @@ public class AsamCCReader {
         return catalog;
     }
 
-    public void read(AsamCCResource resource, Document document) {
+    public void read(AsamCCResource resource, Document document)
+            throws CoreException {
         Catalog catalog;
         Node node = document.getDocumentElement();
         if ("CATALOG".equals(node.getNodeName()) && node.hasChildNodes()) {
@@ -153,11 +157,17 @@ public class AsamCCReader {
     }
 
     public void read(AsamCCResource resource, InputStream inputStream)
-            throws ParserConfigurationException, SAXException, IOException {
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        DocumentBuilder db = dbf.newDocumentBuilder();
-        Document doc = db.parse(inputStream);
-        read(resource, doc);
+            throws CoreException {
+        try {
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            DocumentBuilder db = dbf.newDocumentBuilder();
+            Document doc = db.parse(inputStream);
+            read(resource, doc);
+        } catch (ParserConfigurationException | SAXException | IOException e) {
+            IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+                    e.getMessage(), e);
+            throw new CoreException(status);
+        }
     }
 
 }

@@ -95,6 +95,328 @@ public class ContainerCatalogItemProviderAdapterFactory extends ContainerCatalog
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link asam.cc.AdminData} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected AdminDataItemProvider adminDataItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.AdminData}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createAdminDataAdapter() {
+        if (adminDataItemProvider == null) {
+            adminDataItemProvider = new AdminDataItemProvider(this);
+        }
+
+        return adminDataItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.Sdg} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SdgItemProvider sdgItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.Sdg}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSdgAdapter() {
+        if (sdgItemProvider == null) {
+            sdgItemProvider = new SdgItemProvider(this);
+        }
+
+        return sdgItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.SdgCaption} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SdgCaptionItemProvider sdgCaptionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.SdgCaption}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSdgCaptionAdapter() {
+        if (sdgCaptionItemProvider == null) {
+            sdgCaptionItemProvider = new SdgCaptionItemProvider(this);
+        }
+
+        return sdgCaptionItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.Sd} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SdItemProvider sdItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.Sd}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSdAdapter() {
+        if (sdItemProvider == null) {
+            sdItemProvider = new SdItemProvider(this);
+        }
+
+        return sdItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.Sdf} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SdfItemProvider sdfItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.Sdf}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSdfAdapter() {
+        if (sdfItemProvider == null) {
+            sdfItemProvider = new SdfItemProvider(this);
+        }
+
+        return sdfItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.Identifier} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected IdentifierItemProvider identifierItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.Identifier}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createIdentifierAdapter() {
+        if (identifierItemProvider == null) {
+            identifierItemProvider = new IdentifierItemProvider(this);
+        }
+
+        return identifierItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.ShortNameFragment} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ShortNameFragmentItemProvider shortNameFragmentItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.ShortNameFragment}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createShortNameFragmentAdapter() {
+        if (shortNameFragmentItemProvider == null) {
+            shortNameFragmentItemProvider = new ShortNameFragmentItemProvider(this);
+        }
+
+        return shortNameFragmentItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.SdgContents} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SdgContentsItemProvider sdgContentsItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.SdgContents}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSdgContentsAdapter() {
+        if (sdgContentsItemProvider == null) {
+            sdgContentsItemProvider = new SdgContentsItemProvider(this);
+        }
+
+        return sdgContentsItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link java.util.Map.Entry} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected StringToStringMapItemProvider stringToStringMapItemProvider;
+
+    /**
+     * This creates an adapter for a {@link java.util.Map.Entry}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createStringToStringMapAdapter() {
+        if (stringToStringMapItemProvider == null) {
+            stringToStringMapItemProvider = new StringToStringMapItemProvider(this);
+        }
+
+        return stringToStringMapItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.DocRevision} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DocRevisionItemProvider docRevisionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.DocRevision}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createDocRevisionAdapter() {
+        if (docRevisionItemProvider == null) {
+            docRevisionItemProvider = new DocRevisionItemProvider(this);
+        }
+
+        return docRevisionItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.Modififaction} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ModififactionItemProvider modififactionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.Modififaction}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createModififactionAdapter() {
+        if (modififactionItemProvider == null) {
+            modififactionItemProvider = new ModififactionItemProvider(this);
+        }
+
+        return modififactionItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.MultiLanguageOverviewParagraph} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected MultiLanguageOverviewParagraphItemProvider multiLanguageOverviewParagraphItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.MultiLanguageOverviewParagraph}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createMultiLanguageOverviewParagraphAdapter() {
+        if (multiLanguageOverviewParagraphItemProvider == null) {
+            multiLanguageOverviewParagraphItemProvider = new MultiLanguageOverviewParagraphItemProvider(this);
+        }
+
+        return multiLanguageOverviewParagraphItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.LOverviewParagraph} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected LOverviewParagraphItemProvider lOverviewParagraphItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.LOverviewParagraph}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createLOverviewParagraphAdapter() {
+        if (lOverviewParagraphItemProvider == null) {
+            lOverviewParagraphItemProvider = new LOverviewParagraphItemProvider(this);
+        }
+
+        return lOverviewParagraphItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link asam.cc.MultiLanguagePlainText} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected MultiLanguagePlainTextItemProvider multiLanguagePlainTextItemProvider;
+
+    /**
+     * This creates an adapter for a {@link asam.cc.MultiLanguagePlainText}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createMultiLanguagePlainTextAdapter() {
+        if (multiLanguagePlainTextItemProvider == null) {
+            multiLanguagePlainTextItemProvider = new MultiLanguagePlainTextItemProvider(this);
+        }
+
+        return multiLanguagePlainTextItemProvider;
+    }
+
+    /**
      * This keeps track of the one adapter used for all {@link asam.cc.Ablock} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -118,26 +440,26 @@ public class ContainerCatalogItemProviderAdapterFactory extends ContainerCatalog
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link asam.cc.Files} instances.
+     * This keeps track of the one adapter used for all {@link java.util.Map.Entry} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected FilesItemProvider filesItemProvider;
+    protected ArefItemProvider arefItemProvider;
 
     /**
-     * This creates an adapter for a {@link asam.cc.Files}.
+     * This creates an adapter for a {@link java.util.Map.Entry}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Adapter createFilesAdapter() {
-        if (filesItemProvider == null) {
-            filesItemProvider = new FilesItemProvider(this);
+    public Adapter createArefAdapter() {
+        if (arefItemProvider == null) {
+            arefItemProvider = new ArefItemProvider(this);
         }
 
-        return filesItemProvider;
+        return arefItemProvider;
     }
 
     /**
@@ -240,8 +562,22 @@ public class ContainerCatalogItemProviderAdapterFactory extends ContainerCatalog
      */
     public void dispose() {
         if (catalogItemProvider != null) catalogItemProvider.dispose();
+        if (adminDataItemProvider != null) adminDataItemProvider.dispose();
+        if (sdgItemProvider != null) sdgItemProvider.dispose();
+        if (sdgCaptionItemProvider != null) sdgCaptionItemProvider.dispose();
+        if (sdItemProvider != null) sdItemProvider.dispose();
+        if (sdfItemProvider != null) sdfItemProvider.dispose();
+        if (identifierItemProvider != null) identifierItemProvider.dispose();
+        if (shortNameFragmentItemProvider != null) shortNameFragmentItemProvider.dispose();
+        if (sdgContentsItemProvider != null) sdgContentsItemProvider.dispose();
+        if (stringToStringMapItemProvider != null) stringToStringMapItemProvider.dispose();
+        if (docRevisionItemProvider != null) docRevisionItemProvider.dispose();
+        if (modififactionItemProvider != null) modififactionItemProvider.dispose();
+        if (multiLanguageOverviewParagraphItemProvider != null) multiLanguageOverviewParagraphItemProvider.dispose();
+        if (lOverviewParagraphItemProvider != null) lOverviewParagraphItemProvider.dispose();
+        if (multiLanguagePlainTextItemProvider != null) multiLanguagePlainTextItemProvider.dispose();
         if (ablockItemProvider != null) ablockItemProvider.dispose();
-        if (filesItemProvider != null) filesItemProvider.dispose();
+        if (arefItemProvider != null) arefItemProvider.dispose();
     }
 
 }

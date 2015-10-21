@@ -2,29 +2,30 @@
  */
 package asam.cc.tests;
 
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
-
-import org.junit.Test;
-
 import asam.cc.ContainerCatalogFactory;
-import asam.cc.Files;
+import asam.cc.ContainerCatalogPackage;
+
+import java.util.Map;
+
+import junit.framework.TestCase;
+
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Files</b></em>'.
+ * A test case for the model object '<em><b>String To String Map</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class FilesTest extends TestCase {
+public class StringToStringMapTest extends TestCase {
 
     /**
-     * The fixture for this Files test case.
+     * The fixture for this String To String Map test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected Files fixture = null;
+    protected Map.Entry<String, String> fixture = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -32,36 +33,36 @@ public class FilesTest extends TestCase {
      * @generated
      */
     public static void main(String[] args) {
-        TestRunner.run(FilesTest.class);
+        TestRunner.run(StringToStringMapTest.class);
     }
 
     /**
-     * Constructs a new Files test case with the given name.
+     * Constructs a new String To String Map test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public FilesTest(String name) {
+    public StringToStringMapTest(String name) {
         super(name);
     }
 
     /**
-     * Sets the fixture for this Files test case.
+     * Sets the fixture for this String To String Map test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void setFixture(Files fixture) {
+    protected void setFixture(Map.Entry<String, String> fixture) {
         this.fixture = fixture;
     }
 
     /**
-     * Returns the fixture for this Files test case.
+     * Returns the fixture for this String To String Map test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected Files getFixture() {
+    protected Map.Entry<String, String> getFixture() {
         return fixture;
     }
 
@@ -72,8 +73,9 @@ public class FilesTest extends TestCase {
      * @generated
      */
     @Override
+    @SuppressWarnings("unchecked")
     protected void setUp() throws Exception {
-        setFixture(ContainerCatalogFactory.eINSTANCE.createFiles());
+        setFixture((Map.Entry<String, String>)ContainerCatalogFactory.eINSTANCE.create(ContainerCatalogPackage.Literals.STRING_TO_STRING_MAP));
     }
 
     /**
@@ -87,9 +89,4 @@ public class FilesTest extends TestCase {
         setFixture(null);
     }
 
-    @Test
-    public void testFile() {
-        // TODO dummy
-        assertTrue(true);
-    }
-} // FilesTest
+} //StringToStringMapTest

@@ -1,28 +1,20 @@
 package jp.pizzafactory.model.asam.core.internal;
 
-import org.osgi.framework.BundleActivator;
+import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
 
-public class Activator implements BundleActivator {
+public class Activator extends Plugin {
 
-	private static BundleContext context;
+    public static final String PLUGIN_ID = "jp.pizzafactory.model.asam.core";
 
-	static BundleContext getContext() {
-		return context;
-	}
+    private static BundleContext context;
 
-	/*
-	 * (non-Javadoc)
-	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
-	 */
+    @Override
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
-	 */
+    @Override
 	public void stop(BundleContext bundleContext) throws Exception {
 		Activator.context = null;
 	}

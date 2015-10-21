@@ -5,17 +5,103 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="shortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="aBlocks" upperBound="-1"
         eType="#//Ablock"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="adminData" eType="#//AdminData"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AdminData" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedLanguages" eType="#//MultiLanguagePlainText"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="docRevision" upperBound="-1"
+        eType="#//DocRevision"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sdg" upperBound="-1" eType="#//Sdg"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sdg" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gid" eType="#//NameToken"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sdgCaption" eType="#//SdgCaption"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sdgCaptionRef" eType="#//SdgCaption"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sdgContents" eType="#//SdgContents"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SdgCaption" eSuperTypes="#//ARObject #//Referrable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="desc" eType="#//MultiLanguageOverviewParagraph"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sd" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gid" eType="#//NameToken"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="xmlSpace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sdf" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gid" eType="#//NameToken"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Referrable" abstract="true" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shortName" lowerBound="1"
+        eType="#//Identifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shortNameFragment" upperBound="-1"
+        eType="#//ShortNameFragment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Identifier" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="namePattern" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ShortNameFragment" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fragment" lowerBound="1"
+        eType="#//Identifier"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SdgContents" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sd" eType="#//Sd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sdf" eType="#//Sdf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sdg" eType="#//Sdg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sdx" eType="#//Referrable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sdxf" eType="#//Referrable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StringToStringMap" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocRevision" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="issuedBy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modification" upperBound="-1"
+        eType="#//Modififaction"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="revisionLabel" eType="#//RevisionLabelString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="revisionLabelP1" eType="#//RevisionLabelString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="revisionLabelP2" eType="#//RevisionLabelString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//NameToken"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="RevisionLabelString" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Modififaction" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="change" lowerBound="1"
+        eType="#//MultiLanguageOverviewParagraph"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reason" eType="#//MultiLanguageOverviewParagraph"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultiLanguageOverviewParagraph" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l2" lowerBound="1" upperBound="-1"
+        eType="#//LOverviewParagraph"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LOverviewParagraph" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rawText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultiLanguagePlainText" eSuperTypes="#//ARObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="l10" eType="#//LPlainText"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="LPlainText" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ARObject" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checksum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ablock">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="shortName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arefs" eType="#//Aref"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="domain" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="files" lowerBound="1" eType="#//Files"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="files" lowerBound="1" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intendedFileName" eType="#//EURI"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Files">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Aref" instanceClassName="java.util.Map$Entry"
+      eSuperTypes="#//StringToStringMap"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EURI" instanceClassName="java.net.URL"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="NameToken" instanceClassName="java.lang.String"/>
 </ecore:EPackage>

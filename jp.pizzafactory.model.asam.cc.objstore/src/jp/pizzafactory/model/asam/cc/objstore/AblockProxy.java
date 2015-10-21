@@ -10,9 +10,7 @@ public interface AblockProxy {
 
     void install(String version) throws CoreException;
 
-    void deploy(String version, String targetUrl, String repoId)
-            throws CoreException;
+    void deploy(String version, String repoId) throws CoreException;
 
     void checkout(String version) throws CoreException;
-
 }

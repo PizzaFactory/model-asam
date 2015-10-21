@@ -3,7 +3,8 @@
 package asam.cc.impl;
 
 import asam.cc.ContainerCatalogPackage;
-import asam.cc.Files;
+import asam.cc.LOverviewParagraph;
+import asam.cc.MultiLanguageOverviewParagraph;
 
 import java.util.Collection;
 
@@ -11,40 +12,38 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Files</b></em>'.
+ * An implementation of the model object '<em><b>Multi Language Overview Paragraph</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link asam.cc.impl.FilesImpl#getFile <em>File</em>}</li>
+ *   <li>{@link asam.cc.impl.MultiLanguageOverviewParagraphImpl#getL2 <em>L2</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FilesImpl extends MinimalEObjectImpl.Container implements Files {
+public class MultiLanguageOverviewParagraphImpl extends ARObjectImpl implements MultiLanguageOverviewParagraph {
     /**
-     * The cached value of the '{@link #getFile() <em>File</em>}' attribute list.
+     * The cached value of the '{@link #getL2() <em>L2</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getFile()
+     * @see #getL2()
      * @generated
      * @ordered
      */
-    protected EList<String> file;
+    protected EList<LOverviewParagraph> l2;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected FilesImpl() {
+    protected MultiLanguageOverviewParagraphImpl() {
         super();
     }
 
@@ -55,7 +54,7 @@ public class FilesImpl extends MinimalEObjectImpl.Container implements Files {
      */
     @Override
     protected EClass eStaticClass() {
-        return ContainerCatalogPackage.Literals.FILES;
+        return ContainerCatalogPackage.Literals.MULTI_LANGUAGE_OVERVIEW_PARAGRAPH;
     }
 
     /**
@@ -63,11 +62,11 @@ public class FilesImpl extends MinimalEObjectImpl.Container implements Files {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getFile() {
-        if (file == null) {
-            file = new EDataTypeUniqueEList<String>(String.class, this, ContainerCatalogPackage.FILES__FILE);
+    public EList<LOverviewParagraph> getL2() {
+        if (l2 == null) {
+            l2 = new EObjectResolvingEList<LOverviewParagraph>(LOverviewParagraph.class, this, ContainerCatalogPackage.MULTI_LANGUAGE_OVERVIEW_PARAGRAPH__L2);
         }
-        return file;
+        return l2;
     }
 
     /**
@@ -78,8 +77,8 @@ public class FilesImpl extends MinimalEObjectImpl.Container implements Files {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case ContainerCatalogPackage.FILES__FILE:
-                return getFile();
+            case ContainerCatalogPackage.MULTI_LANGUAGE_OVERVIEW_PARAGRAPH__L2:
+                return getL2();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -93,9 +92,9 @@ public class FilesImpl extends MinimalEObjectImpl.Container implements Files {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case ContainerCatalogPackage.FILES__FILE:
-                getFile().clear();
-                getFile().addAll((Collection<? extends String>)newValue);
+            case ContainerCatalogPackage.MULTI_LANGUAGE_OVERVIEW_PARAGRAPH__L2:
+                getL2().clear();
+                getL2().addAll((Collection<? extends LOverviewParagraph>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -109,8 +108,8 @@ public class FilesImpl extends MinimalEObjectImpl.Container implements Files {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case ContainerCatalogPackage.FILES__FILE:
-                getFile().clear();
+            case ContainerCatalogPackage.MULTI_LANGUAGE_OVERVIEW_PARAGRAPH__L2:
+                getL2().clear();
                 return;
         }
         super.eUnset(featureID);
@@ -124,26 +123,10 @@ public class FilesImpl extends MinimalEObjectImpl.Container implements Files {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case ContainerCatalogPackage.FILES__FILE:
-                return file != null && !file.isEmpty();
+            case ContainerCatalogPackage.MULTI_LANGUAGE_OVERVIEW_PARAGRAPH__L2:
+                return l2 != null && !l2.isEmpty();
         }
         return super.eIsSet(featureID);
     }
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (eIsProxy()) return super.toString();
-
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (file: ");
-        result.append(file);
-        result.append(')');
-        return result.toString();
-    }
-
-} //FilesImpl
+} //MultiLanguageOverviewParagraphImpl
