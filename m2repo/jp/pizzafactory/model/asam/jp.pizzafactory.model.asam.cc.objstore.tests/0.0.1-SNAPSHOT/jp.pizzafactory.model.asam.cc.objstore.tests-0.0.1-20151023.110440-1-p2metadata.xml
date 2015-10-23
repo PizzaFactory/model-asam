@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='jp.pizzafactory.model.asam.cc.objstore.tests' version='0.0.1.v20151021-0510' singleton='false'>
+    <update id='jp.pizzafactory.model.asam.cc.objstore.tests' range='[0.0.0,0.0.1.v20151021-0510)' severity='0'/>
+    <properties size='4'>
+      <property name='org.eclipse.equinox.p2.name' value='Tests'/>
+      <property name='maven-groupId' value='jp.pizzafactory.model.asam'/>
+      <property name='maven-artifactId' value='jp.pizzafactory.model.asam.cc.objstore.tests'/>
+      <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+    </properties>
+    <provides size='4'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.model.asam.cc.objstore.tests' version='0.0.1.v20151021-0510'/>
+      <provided namespace='osgi.bundle' name='jp.pizzafactory.model.asam.cc.objstore.tests' version='0.0.1.v20151021-0510'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      <provided namespace='osgi.fragment' name='jp.pizzafactory.model.asam.cc.objstore' version='0.0.1.v20151021-0510'/>
+    </provides>
+    <requires size='3'>
+      <required namespace='osgi.bundle' name='jp.pizzafactory.model.asam.cc.objstore' range='0.0.1'/>
+      <required namespace='osgi.bundle' name='org.junit' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.apache.commons.io' range='2.0.1'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='jp.pizzafactory.model.asam.cc.objstore.tests' version='0.0.1.v20151021-0510'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: jp.pizzafactory.model.asam.cc.objstore.tests&#xA;Bundle-Version: 0.0.1.v20151021-0510&#xA;Fragment-Host: jp.pizzafactory.model.asam.cc.objstore;bundle-version=&quot;0.0.1&quot;&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
