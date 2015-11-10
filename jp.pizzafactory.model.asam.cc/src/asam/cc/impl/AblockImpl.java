@@ -4,7 +4,7 @@ package asam.cc.impl;
 
 import asam.cc.Ablock;
 import asam.cc.ContainerCatalogPackage;
-import java.net.URL;
+import java.net.URI;
 import java.util.Collection;
 import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
@@ -123,7 +123,7 @@ public class AblockImpl extends MinimalEObjectImpl.Container implements Ablock {
      * @generated
      * @ordered
      */
-    protected static final URL INTENDED_FILE_NAME_EDEFAULT = null;
+    protected static final URI INTENDED_FILE_NAME_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getIntendedFileName() <em>Intended File Name</em>}' attribute.
@@ -133,7 +133,7 @@ public class AblockImpl extends MinimalEObjectImpl.Container implements Ablock {
      * @generated
      * @ordered
      */
-    protected URL intendedFileName = INTENDED_FILE_NAME_EDEFAULT;
+    protected URI intendedFileName = INTENDED_FILE_NAME_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -273,7 +273,7 @@ public class AblockImpl extends MinimalEObjectImpl.Container implements Ablock {
      * <!-- end-user-doc -->
      * @generated
      */
-    public URL getIntendedFileName() {
+    public URI getIntendedFileName() {
         return intendedFileName;
     }
 
@@ -282,8 +282,8 @@ public class AblockImpl extends MinimalEObjectImpl.Container implements Ablock {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setIntendedFileName(URL newIntendedFileName) {
-        URL oldIntendedFileName = intendedFileName;
+    public void setIntendedFileName(URI newIntendedFileName) {
+        URI oldIntendedFileName = intendedFileName;
         intendedFileName = newIntendedFileName;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, ContainerCatalogPackage.ABLOCK__INTENDED_FILE_NAME, oldIntendedFileName, intendedFileName));
@@ -340,7 +340,7 @@ public class AblockImpl extends MinimalEObjectImpl.Container implements Ablock {
                 getFiles().addAll((Collection<? extends String>)newValue);
                 return;
             case ContainerCatalogPackage.ABLOCK__INTENDED_FILE_NAME:
-                setIntendedFileName((URL)newValue);
+                setIntendedFileName((URI)newValue);
                 return;
         }
         super.eSet(featureID, newValue);

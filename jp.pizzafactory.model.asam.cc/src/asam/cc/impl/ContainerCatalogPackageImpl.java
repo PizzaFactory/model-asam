@@ -21,7 +21,7 @@ import asam.cc.Sdg;
 import asam.cc.SdgCaption;
 import asam.cc.SdgContents;
 import asam.cc.ShortNameFragment;
-import java.net.URL;
+import java.net.URI;
 import java.util.Map;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -1165,7 +1165,7 @@ public class ContainerCatalogPackageImpl extends EPackageImpl implements Contain
         // Initialize data types
         initEDataType(revisionLabelStringEDataType, String.class, "RevisionLabelString", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
         initEDataType(lPlainTextEDataType, String.class, "LPlainText", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-        initEDataType(euriEDataType, URL.class, "EURI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+        initEDataType(euriEDataType, URI.class, "EURI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
         initEDataType(nameTokenEDataType, String.class, "NameToken", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
         // Create resource

@@ -2,7 +2,7 @@
  */
 package asam.cc;
 
-import java.net.URL;
+import java.net.URI;
 import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -158,12 +158,12 @@ public interface Ablock extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Intended File Name</em>' attribute.
-     * @see #setIntendedFileName(URL)
+     * @see #setIntendedFileName(URI)
      * @see asam.cc.ContainerCatalogPackage#getAblock_IntendedFileName()
      * @model dataType="asam.cc.EURI"
      * @generated
      */
-    URL getIntendedFileName();
+    URI getIntendedFileName();
 
     /**
      * Sets the value of the '{@link asam.cc.Ablock#getIntendedFileName <em>Intended File Name</em>}' attribute.
@@ -173,6 +173,6 @@ public interface Ablock extends EObject {
      * @see #getIntendedFileName()
      * @generated
      */
-    void setIntendedFileName(URL value);
+    void setIntendedFileName(URI value);
 
 } // Ablock

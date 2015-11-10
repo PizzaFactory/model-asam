@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
@@ -66,7 +67,8 @@ public class ZipperImpl implements Zipper {
                     }
                     is = new FileInputStream(file);
                 } else {
-                    is = ablock.getIntendedFileName().openStream();
+                    URI intendedFileName = ablock.getIntendedFileName();
+                    is = intendedFileName.toURL().openStream();
                 }
                 zos.putNextEntry(entry);
                 bis = new BufferedInputStream(is);

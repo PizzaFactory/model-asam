@@ -3,7 +3,7 @@
 package asam.cc.impl;
 
 import asam.cc.*;
-import java.net.URL;
+import java.net.URI;
 import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -331,8 +331,8 @@ public class ContainerCatalogFactoryImpl extends EFactoryImpl implements Contain
      * <!-- end-user-doc -->
      * @generated
      */
-    public URL createEURIFromString(EDataType eDataType, String initialValue) {
-        return (URL)super.createFromString(eDataType, initialValue);
+    public URI createEURIFromString(EDataType eDataType, String initialValue) {
+        return (URI)super.createFromString(eDataType, initialValue);
     }
 
     /**

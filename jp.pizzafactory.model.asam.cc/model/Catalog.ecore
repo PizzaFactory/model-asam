@@ -102,6 +102,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Aref" instanceClassName="java.util.Map$Entry"
       eSuperTypes="#//StringToStringMap"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="EURI" instanceClassName="java.net.URL"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EURI" instanceClassName="java.net.URI"/>
   <eClassifiers xsi:type="ecore:EDataType" name="NameToken" instanceClassName="java.lang.String"/>
 </ecore:EPackage>

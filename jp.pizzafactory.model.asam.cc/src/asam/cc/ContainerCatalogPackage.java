@@ -1224,7 +1224,7 @@ public interface ContainerCatalogPackage extends EPackage {
      * The meta object id for the '<em>EURI</em>' data type.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see java.net.URL
+     * @see java.net.URI
      * @see asam.cc.impl.ContainerCatalogPackageImpl#getEURI()
      * @generated
      */
@@ -2005,12 +2005,12 @@ public interface ContainerCatalogPackage extends EPackage {
     EDataType getLPlainText();
 
     /**
-     * Returns the meta object for data type '{@link java.net.URL <em>EURI</em>}'.
+     * Returns the meta object for data type '{@link java.net.URI <em>EURI</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for data type '<em>EURI</em>'.
-     * @see java.net.URL
-     * @model instanceClass="java.net.URL"
+     * @see java.net.URI
+     * @model instanceClass="java.net.URI"
      * @generated
      */
     EDataType getEURI();
@@ -2679,7 +2679,7 @@ public interface ContainerCatalogPackage extends EPackage {
          * The meta object literal for the '<em>EURI</em>' data type.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see java.net.URL
+         * @see java.net.URI
          * @see asam.cc.impl.ContainerCatalogPackageImpl#getEURI()
          * @generated
          */
