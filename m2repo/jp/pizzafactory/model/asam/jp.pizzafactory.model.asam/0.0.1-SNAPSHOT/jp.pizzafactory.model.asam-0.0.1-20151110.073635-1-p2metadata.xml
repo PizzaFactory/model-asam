@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='2'>
+  <unit id='jp.pizzafactory.model.asam.feature.group' version='0.0.1.v20151110-0729' singleton='false'>
+    <update id='jp.pizzafactory.model.asam.feature.group' range='[0.0.0,0.0.1.v20151110-0729)' severity='0'/>
+    <properties size='7'>
+      <property name='org.eclipse.equinox.p2.name' value='ASAM Specified Models (core)'/>
+      <property name='org.eclipse.equinox.p2.description' value='Plugins for ASAM Specified Models'/>
+      <property name='org.eclipse.equinox.p2.provider' value='PizzaFactory Project'/>
+      <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      <property name='maven-groupId' value='jp.pizzafactory.model.asam'/>
+      <property name='maven-artifactId' value='jp.pizzafactory.model.asam'/>
+      <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.model.asam.feature.group' version='0.0.1.v20151110-0729'/>
+    </provides>
+    <requires size='4'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.model.asam.core' range='[0.0.1.v20151021-0510,0.0.1.v20151021-0510]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.model.asam.cc' range='[0.0.1.v20151110-0729,0.0.1.v20151110-0729]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.model.asam.cc.objstore' range='[0.0.1.v20151110-0729,0.0.1.v20151110-0729]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.model.asam.feature.jar' range='[0.0.1.v20151110-0729,0.0.1.v20151110-0729]'>
+        <filter>
+          (org.eclipse.update.install.features=true)
+        </filter>
+      </required>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+    <licenses size='1'>
+      <license>
+        EPL 1.0
+      </license>
+    </licenses>
+    <copyright uri='http://www.example.com/copyright' url='http://www.example.com/copyright'>
+      Copyright (C) 2010- PizzaFactory Project.
+    </copyright>
+  </unit>
+  <unit id='jp.pizzafactory.model.asam.feature.jar' version='0.0.1.v20151110-0729'>
+    <properties size='6'>
+      <property name='org.eclipse.equinox.p2.name' value='ASAM Specified Models (core)'/>
+      <property name='org.eclipse.equinox.p2.description' value='Plugins for ASAM Specified Models'/>
+      <property name='org.eclipse.equinox.p2.provider' value='PizzaFactory Project'/>
+      <property name='maven-groupId' value='jp.pizzafactory.model.asam'/>
+      <property name='maven-artifactId' value='jp.pizzafactory.model.asam'/>
+      <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+    </properties>
+    <provides size='3'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.model.asam.feature.jar' version='0.0.1.v20151110-0729'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+      <provided namespace='org.eclipse.update.feature' name='jp.pizzafactory.model.asam' version='0.0.1.v20151110-0729'/>
+    </provides>
+    <filter>
+      (org.eclipse.update.install.features=true)
+    </filter>
+    <artifacts size='1'>
+      <artifact classifier='org.eclipse.update.feature' id='jp.pizzafactory.model.asam' version='0.0.1.v20151110-0729'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='zipped'>
+          true
+        </instruction>
+      </instructions>
+    </touchpointData>
+    <licenses size='1'>
+      <license>
+        EPL 1.0
+      </license>
+    </licenses>
+    <copyright uri='http://www.example.com/copyright' url='http://www.example.com/copyright'>
+      Copyright (C) 2010- PizzaFactory Project.
+    </copyright>
+  </unit>
+</units>
