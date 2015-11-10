@@ -4,14 +4,15 @@
   type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository'
   version='1.0.0'>
   <properties size='1'>
-    <property name='p2.timestamp' value='1445598508'/>
+    <property name='p2.timestamp' value='1447141512'/>
   </properties>
- <children size='6'>
+ <children size='7'>
     <child location='/model-asam/p2repo/8.5/0.0.1.v20150721-2234/'/>
     <child location='/model-asam/p2repo/8.5/0.0.1.v20150722-0549/'/>
     <child location='/model-asam/p2repo/8.5/0.0.1.v20150723-2202/'/>
     <child location='/model-asam/p2repo/8.5/0.0.1.v20150901-0508/'/>
     <child location='/model-asam/p2repo/8.5/0.0.1.v20151021-0510/'/>
     <child location='/model-asam/p2repo/8.5/0.0.1.v20151023-1051/'/>
+    <child location='/model-asam/p2repo/8.5/0.0.1.v20151110-0729/'/>
   </children>
 </repository>
