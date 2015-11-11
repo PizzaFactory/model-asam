@@ -84,7 +84,7 @@ public class AsamCCReader {
                     }
                     break;
                 case "FILES":
-                    if (ablock.getFiles() != null) {
+                    if (ablock.getFiles().size() != 0) {
                         /* error */
                     } else {
                         ablock.getFiles().addAll(parseInFiles(node));

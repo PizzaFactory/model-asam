@@ -42,6 +42,8 @@ public class AsamCCReaderTest {
         assertTrue(o instanceof CatalogImpl);
         Catalog c = (Catalog) o;
         assertEquals("sample", c.getShortName());
+
+        assertTrue(c.getABlocks().get(0).getFiles().size() == 1);
     }
 
 }
