@@ -4,9 +4,10 @@
   type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository'
   version='1.0.0'>
   <properties size='1'>
-    <property name='p2.timestamp' value='1448870162'/>
+    <property name='p2.timestamp' value='1448875243'/>
   </properties>
- <children size='1'>
+ <children size='2'>
     <child location='/model-asam/p2repo/8.5/0.0.1.20151130-0750/'/>
+    <child location='/model-asam/p2repo/8.5/0.0.1.20151130-0915/'/>
   </children>
 </repository>
