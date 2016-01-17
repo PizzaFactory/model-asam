@@ -24,7 +24,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<tycho-version>0.22.0</tycho-version>
-		<tycho-extras.version>0.22.0</tycho-extras.version>
+		<tycho-extras-version>0.22.0</tycho-extras-version>
 		<tycho-groupid>org.eclipse.tycho</tycho-groupid>
 		<pizzafactory-version>8.5</pizzafactory-version>
 		<github.global.oauth2Token>${env.GH_TOKEN}</github.global.oauth2Token>
@@ -290,7 +290,7 @@
 				<plugin>
 					<groupId>${tycho-groupid}</groupId>
 					<artifactId>tycho-packaging-plugin</artifactId>
-					<version>${tycho-extras.version}</version>
+					<version>${tycho-extras-version}</version>
 					<dependencies>
 						<dependency>
 							<groupId>org.eclipse.tycho.extras</groupId>
