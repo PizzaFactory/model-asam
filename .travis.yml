@@ -1,11 +1,14 @@
 language: java
 jdk:
 - oraclejdk8
-script: mvn -f parent/pom.xml deploy
+script:
+- if [[ "x$TRAVIS_BRANCH" == "xmaster" && "x$TRAVIS_PULL_REQUEST" == "xfalse" ]]; then GOAL=deploy; else GOAL=install; fi
+- echo "Goal is " $GOAL
+- mvn -f parent/pom.xml clean $GOAL
 after_success:
 - git clone --depth=1 -b gh-pages https://${GH_TOKEN}@github.com/PizzaFactory/model-asam.git gh-pages
 - cd gh-pages
-- mvn process-resources install
+- if [ "x$TRAVIS_PULL_REQUEST" == "xfalse" && "x$TRAVIS_BRANCH" == "xmaster" ]; then mvn process-resources install; fi
 env:
   global:
   - MAVEN_OPTS=-Xmx1024m
