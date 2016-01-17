@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='2'>
+  <artifact classifier='org.eclipse.update.feature' id='jp.pizzafactory.model.asam.ui' version='0.0.1.v20151021-0510'>
+    <properties size='6'>
+      <property name='artifact.size' value='2476'/>
+      <property name='download.size' value='2476'/>
+      <property name='maven-groupId' value='jp.pizzafactory.model.asam'/>
+      <property name='maven-artifactId' value='jp.pizzafactory.model.asam.ui'/>
+      <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      <property name='download.contentType' value='application/zip'/>
+    </properties>
+  </artifact>
+  <artifact classifier='org.eclipse.update.feature' id='jp.pizzafactory.model.asam.ui.source' version='0.0.1.v20151021-0510'>
+    <properties size='7'>
+      <property name='artifact.size' value='2616'/>
+      <property name='download.size' value='2616'/>
+      <property name='maven-groupId' value='jp.pizzafactory.model.asam'/>
+      <property name='maven-artifactId' value='jp.pizzafactory.model.asam.ui'/>
+      <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      <property name='maven-classifier' value='sources-feature'/>
+      <property name='download.contentType' value='application/zip'/>
+    </properties>
+  </artifact>
+</artifacts>
