@@ -8,8 +8,8 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: asam.cc.tests
-Require-Bundle: org.eclipse.core.runtime,
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
  jp.pizzafactory.model.asam.cc;visibility:=reexport,
- org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.junit;visibility:=reexport
+ org.eclipse.emf.ecore.xmi;bundle-version="2.10.2";visibility:=reexport,
+ org.junit;bundle-version="4.11.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
