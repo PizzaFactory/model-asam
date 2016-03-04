@@ -4,16 +4,20 @@
   type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository'
   version='1.0.0'>
   <properties size='1'>
-    <property name='p2.timestamp' value='1453008137'/>
+    <property name='p2.timestamp' value='1457052439'/>
   </properties>
- <children size='8'>
-    <child location='/model-asam/p2repo/8.5/0.0.1.v20150721-2234/'/>
-    <child location='/model-asam/p2repo/8.5/0.0.1.v20150722-0549/'/>
-    <child location='/model-asam/p2repo/8.5/0.0.1.v20150723-2202/'/>
-    <child location='/model-asam/p2repo/8.5/0.0.1.v20150901-0508/'/>
-    <child location='/model-asam/p2repo/8.5/0.0.1.v20151021-0510/'/>
-    <child location='/model-asam/p2repo/8.5/0.0.1.v20151023-1051/'/>
-    <child location='/model-asam/p2repo/8.5/0.0.1.v20151110-0729/'/>
-    <child location='/model-asam/p2repo/8.5/0.0.1.v20151111-2114/'/>
+ <children size='12'>
+    <child location='0.0.1.v20151111-2114/'/>
+    <child location='0.0.1.v20160125-0838/'/>
+    <child location='0.0.1.v20151023-1051/'/>
+    <child location='0.0.1.v20151021-0510/'/>
+    <child location='0.0.1.v20160126-0540/'/>
+    <child location='0.0.1.v20160126-0834/'/>
+    <child location='0.0.1.v20150721-2234/'/>
+    <child location='0.0.1.v20150901-0508/'/>
+    <child location='0.0.1.v20160126-0457/'/>
+    <child location='0.0.1.v20150723-2202/'/>
+    <child location='0.0.1.v20151110-0729/'/>
+    <child location='0.0.1.v20150722-0549/'/>
   </children>
 </repository>
