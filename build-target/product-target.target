@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="PizzaFactory8" sequenceNumber="120">
+<?pde version="3.8"?><target name="ASAM Models for PizzaFactory" sequenceNumber="121">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.aether.maven.feature.feature.group" version="3.1.0.20140706-2237"/>
@@ -16,7 +16,6 @@
 <repository location="http://download.eclipse.org/aether/aether-core/releases/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.dltk.ruby.feature.group" version="5.0.0.201306060709"/>
 <unit id="org.eclipse.emf.common.feature.group" version="2.10.1.v20140901-1043"/>
 <repository location="http://download.eclipse.org/releases/luna/"/>
 </location>
