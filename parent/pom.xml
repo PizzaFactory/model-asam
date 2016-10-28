@@ -47,6 +47,7 @@
 		<module>../jp.pizzafactory.model.asam.core.tests</module>
 		<module>../jp.pizzafactory.model.asam.cc.objstore</module>
 		<module>../jp.pizzafactory.model.asam.cc.objstore.tests</module>
+		<module>../jp.pizzafactory.model.asam.ide</module>
 		<module>../jp.pizzafactory.model.asam.ui</module>
 		<module>../p2update</module>
 	</modules>
