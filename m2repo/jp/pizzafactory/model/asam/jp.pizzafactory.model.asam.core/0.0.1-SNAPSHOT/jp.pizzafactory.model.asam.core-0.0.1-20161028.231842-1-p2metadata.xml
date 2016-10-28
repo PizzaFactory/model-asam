@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='2'>
+  <unit id='jp.pizzafactory.model.asam.core' version='0.0.1.v20160126-0834'>
+    <update id='jp.pizzafactory.model.asam.core' range='[0.0.0,0.0.1.v20160126-0834)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='EMF Rreources for models specified by ASAM'/>
+      <property name='org.eclipse.equinox.p2.provider' value='PizzaFactory Project.'/>
+      <property name='maven-groupId' value='jp.pizzafactory.model.asam'/>
+      <property name='maven-artifactId' value='jp.pizzafactory.model.asam.core'/>
+      <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+    </properties>
+    <provides size='5'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.model.asam.core' version='0.0.1.v20160126-0834'/>
+      <provided namespace='osgi.bundle' name='jp.pizzafactory.model.asam.core' version='0.0.1.v20160126-0834'/>
+      <provided namespace='java.package' name='jp.pizzafactory.model.asam.core' version='0.0.0'/>
+      <provided namespace='java.package' name='jp.pizzafactory.model.asam.core.impl' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='5'>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.10.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf' range='2.6.0'/>
+      <required namespace='osgi.bundle' name='jp.pizzafactory.model.asam.cc' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='2.10.2'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.ecore.xmi' range='2.10.2'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='jp.pizzafactory.model.asam.core' version='0.0.1.v20160126-0834'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: jp.pizzafactory.model.asam.core;singleton:=true&#xA;Bundle-Version: 0.0.1.v20160126-0834&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+  <unit id='jp.pizzafactory.model.asam.core.source' version='0.0.1.v20160126-0834' singleton='false'>
+    <update id='jp.pizzafactory.model.asam.core.source' range='[0.0.0,0.0.1.v20160126-0834)' severity='0'/>
+    <properties size='9'>
+      <property name='df_LT.bundleVendor' value='PizzaFactory Project.'/>
+      <property name='df_LT.bundleName' value='EMF Rreources for models specified by ASAM Source'/>
+      <property name='org.eclipse.equinox.p2.name' value='%bundleName'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%bundleVendor'/>
+      <property name='org.eclipse.equinox.p2.bundle.localization' value='OSGI-INF/l10n/bundle-src'/>
+      <property name='maven-groupId' value='jp.pizzafactory.model.asam'/>
+      <property name='maven-artifactId' value='jp.pizzafactory.model.asam.core'/>
+      <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      <property name='maven-classifier' value='sources'/>
+    </properties>
+    <provides size='4'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.model.asam.core.source' version='0.0.1.v20160126-0834'/>
+      <provided namespace='osgi.bundle' name='jp.pizzafactory.model.asam.core.source' version='0.0.1.v20160126-0834'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='source' version='1.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+    </provides>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='jp.pizzafactory.model.asam.core.source' version='0.0.1.v20160126-0834'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: jp.pizzafactory.model.asam.core.source&#xA;Bundle-Version: 0.0.1.v20160126-0834&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
