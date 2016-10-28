@@ -14,7 +14,7 @@ import org.eclipse.aether.repository.RemoteRepository;
 public class RepositoryConfigurationImpl implements RepositoryConfiguration {
     private final RepositorySystem system;
     private final RepositorySystemSession session;
-    private AblockProxyFactory ablockProxyFactory;
+    private final AblockProxyFactory ablockProxyFactory;
     private final List<RemoteRepository> remoteRepositories;
     private final File basedir;
 

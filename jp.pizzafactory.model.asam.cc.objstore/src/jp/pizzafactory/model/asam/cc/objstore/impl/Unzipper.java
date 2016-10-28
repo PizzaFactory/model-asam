@@ -29,7 +29,7 @@ public class Unzipper {
         final Map<String, String> pathHash = new HashMap<String, String>();
         for (String filePath : ablock.getFiles()) {
             if (pathHash.get(filePath) != null) {
-                IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+                final IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
                         filePath);
                 multiStatus.add(status);
             }
@@ -56,8 +56,7 @@ public class Unzipper {
                     final String relativePath = entry.getName();
                     if (pathHash.get(relativePath) != null) {
                         final File outFile = new File(basedir, relativePath);
-                        final File parentDir = outFile.getParentFile();
-                        parentDir.mkdirs();
+                        outFile.getParentFile().mkdirs();
                         final FileOutputStream fos = new FileOutputStream(
                                 outFile);
                         IOUtils.copy(zis, fos);
@@ -66,7 +65,7 @@ public class Unzipper {
                 }
             }
         } catch (IOException e) {
-            IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+            final IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
                     "Internal error: unzip failed.", e);
             throw new CoreException(status);
         }
@@ -79,9 +78,9 @@ public class Unzipper {
      */
     private void checkMissingFiles(Map<String, String> pathHash)
             throws CoreException {
-        MultiStatus multiStatus = new MultiStatus(Activator.PLUGIN_ID, 0,
+        final MultiStatus multiStatus = new MultiStatus(Activator.PLUGIN_ID, 0,
                 "Specified file(s) are not found.", null);
-        for (String path : pathHash.keySet()) {
+        for (final String path : pathHash.keySet()) {
             if (!new File(path).exists()) {
                 multiStatus.add(new Status(IStatus.ERROR, Activator.PLUGIN_ID,
                         path, null));

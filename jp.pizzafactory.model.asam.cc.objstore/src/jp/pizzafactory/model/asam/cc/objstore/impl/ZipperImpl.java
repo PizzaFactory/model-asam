@@ -29,10 +29,10 @@ import asam.cc.Ablock;
 
 public class ZipperImpl implements Zipper {
     private HashMap<String, String> pathMap;
-    private Ablock ablock;
-    private RepositoryConfiguration conf;
+    private final Ablock ablock;
+    private final RepositoryConfiguration conf;
 
-    ZipperImpl(Ablock ablock, RepositoryConfiguration conf) {
+    ZipperImpl(final Ablock ablock, final RepositoryConfiguration conf) {
         this.ablock = ablock;
         this.conf = conf;
     }
@@ -41,7 +41,7 @@ public class ZipperImpl implements Zipper {
 
         if (ablock.getFiles().size() != 1
                 && ablock.getIntendedFileName() != null) {
-            IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+            final IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
                     "Must be one <FILE/> element when you use intented filename.");
             throw new CoreException(status);
         }
@@ -100,12 +100,12 @@ public class ZipperImpl implements Zipper {
 
         try {
             try {
-                Path zipPath = Files.createTempFile(null, null);
+                final Path zipPath = Files.createTempFile(null, null);
                 zipFile = zipPath.toFile();
-                FileOutputStream fos = new FileOutputStream(zipFile);
+                final FileOutputStream fos = new FileOutputStream(zipFile);
                 zos = new ZipOutputStream(new BufferedOutputStream(fos));
             } catch (IOException e) {
-                IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+                final IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
                         "Internal error: can't create zip file.", e);
                 throw new CoreException(status);
             }
