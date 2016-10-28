@@ -58,6 +58,18 @@
 			<url>http://download.eclipse.org/releases/luna/</url>
 			<layout>p2</layout>
 		</repository>
+		<repository>
+			<id>aether-core</id>
+			<name>Aether core</name>
+			<url>http://download.eclipse.org/aether/aether-core/releases/</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>maven-aether-provider</id>
+			<name>Maven Aether provider</name>
+			<url>http://download.eclipse.org/aether/maven-aether-provider/releases/</url>
+			<layout>p2</layout>
+		</repository>
 	</repositories>
 
 	<build>
