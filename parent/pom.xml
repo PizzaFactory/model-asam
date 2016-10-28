@@ -76,6 +76,12 @@
 			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20150124073747/repository/</url>
 			<layout>p2</layout>
 		</repository>
+		<repository>
+			<id>Sphinx</id>
+			<name>Sphinx</name>
+			<url>http://download.eclipse.org/sphinx/releases/0.10.x</url>
+			<layout>p2</layout>
+		</repository>
 	</repositories>
 
 	<build>
