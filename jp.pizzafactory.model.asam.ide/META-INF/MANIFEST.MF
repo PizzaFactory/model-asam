@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: IDE support for PizzaFactory/asam
+Bundle-SymbolicName: jp.pizzafactory.model.asam.ide;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: jp.pizzafactory.model.asam.ide.internal.Activator
+Bundle-Vendor: PizzaFactory Project
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.sphinx.emf;bundle-version="0.10.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
