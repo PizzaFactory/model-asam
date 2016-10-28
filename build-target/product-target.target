@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="ASAM Models for PizzaFactory" sequenceNumber="121">
+<?pde version="3.8"?><target name="ASAM Models for PizzaFactory" sequenceNumber="131">
 <locations>
-<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.aether.maven.feature.feature.group" version="3.1.0.20140706-2237"/>
 <repository location="http://download.eclipse.org/aether/maven-aether-provider/releases/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.aether.feature.feature.group" version="1.0.1.v20141111"/>
 <unit id="org.eclipse.aether.transport.http.feature.feature.group" version="1.0.1.v20141111"/>
 <unit id="org.eclipse.aether.feature.source.feature.group" version="1.0.1.v20141111"/>
@@ -15,14 +15,9 @@
 <unit id="org.eclipse.aether.transport.classpath.feature.feature.group" version="1.0.1.v20141111"/>
 <repository location="http://download.eclipse.org/aether/aether-core/releases/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.common.feature.group" version="2.10.1.v20140901-1043"/>
 <repository location="http://download.eclipse.org/releases/luna/"/>
 </location>
 </locations>
-<environment>
-<os>macosx</os>
-<ws>cocoa</ws>
-<arch>x86_64</arch>
-</environment>
 </target>
