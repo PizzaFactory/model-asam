@@ -70,6 +70,12 @@
 			<url>http://download.eclipse.org/aether/maven-aether-provider/releases/</url>
 			<layout>p2</layout>
 		</repository>
+		<repository>
+			<id>orbit</id>
+			<name>Orbit</name>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20150124073747/repository/</url>
+			<layout>p2</layout>
+		</repository>
 	</repositories>
 
 	<build>
